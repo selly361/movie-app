@@ -1,0 +1,67 @@
+
+
+.MovieContainer {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+    h1 {
+        font-size: 1.1rem;
+        width: 170px;
+    }
+
+    img {
+        height: 300px;
+    }
+    
+}
+
+.movie {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    height: 400px;
+    padding: .5rem 2rem;
+    transition: 300ms transform linear;
+
+    &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+}
+
+a, a:active, a:hover {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+section {
+    position: absolute;
+    font-size: 2rem;
+    top: 8rem;
+}
+
+@media screen and (min-width: 320px) and  (max-width: 540px) {
+    .MovieContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width: 1024px) {
+    .MovieContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) and  (max-width: 1280px) {
+    .MovieContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
